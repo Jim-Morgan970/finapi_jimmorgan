@@ -15,7 +15,7 @@ steps:
   - script: |
       echo "##vso[task.setvariable variable=PIPELINE_START_TIME]$(date +%s.%3N)"
       echo "##vso[task.setvariable variable=PIPELINE_START_TIME_UTC]$(date -u +%Y-%m-%dT%H:%M:%SZ)"
-  displayName: "Capture pipeline start time"
+displayName: "Capture pipeline start time"
   - script: |
       /azagent/venv/bin/pip3 install pytest requests
     displayName: "Install dependencies"
